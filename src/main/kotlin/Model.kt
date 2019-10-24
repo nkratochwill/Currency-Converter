@@ -1,0 +1,1 @@
+data class Model(val temp:Unit)
