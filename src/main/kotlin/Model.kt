@@ -1,1 +1,1 @@
-data class Model(val temp:Unit)
+data class Model(val temp: Unit)

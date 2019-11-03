@@ -12,8 +12,6 @@ import javafx.scene.control.TextField
 import javafx.scene.web.WebEngine
 import javafx.scene.web.WebView
 import javafx.stage.Stage
-import org.json.JSONObject
-import java.net.URL
 
 class Controller : Application() {
     lateinit var currencyTextField: TextField
@@ -55,7 +53,13 @@ class Controller : Application() {
     }
 
     fun convert() {
-        webEngine.loadContent(strategy.get_rates(amountTextField.text, currencyTextField.text, targetCurrencyTextField.text.split(",")))
+        webEngine.loadContent(
+            strategy.get_rates(
+                amountTextField.text,
+                currencyTextField.text.toUpperCase(),
+                targetCurrencyTextField.text.toUpperCase().split(",")
+            )
+        )
     }
 
     fun exit() {
@@ -67,6 +71,6 @@ class Controller : Application() {
         targetCurrencyTextField.clear()
         amountTextField.clear()
         webEngine.load("about:blank")
-     }
+    }
 
 }
