@@ -1,0 +1,209 @@
+<HTML>
+<HEAD>
+    <meta charset="UTF-8">
+    <title>Controller - CurrencyConverter</title>
+    <link href="../../../style.css" rel="stylesheet">
+</HEAD>
+<BODY>
+<a href="../../index.html">CurrencyConverter</a>&nbsp;/&nbsp;<a href="../index.html">controller</a>&nbsp;/&nbsp;<a
+        href="./index.html">Controller</a><br/>
+<br/>
+<h1>Controller</h1>
+<code><span class="keyword">class </span><span class="identifier">Controller</span>&nbsp;<span class="symbol">:</span>&nbsp;<span
+        class="identifier">Application</span></code>
+<p>Initializes the gui and binds the gui elements to the fxml file</p>
+<h3>Constructors</h3>
+<table>
+    <tbody>
+    <tr>
+        <td>
+            <h4><a href="-init-.html">&lt;init&gt;</a></h4>
+        </td>
+        <td>
+            <p>Initializes the gui and binds the gui elements to the fxml file</p>
+            <code><span class="identifier">Controller</span><span class="symbol">(</span><span
+                    class="symbol">)</span></code></td>
+    </tr>
+    </tbody>
+</table>
+<h3>Properties</h3>
+<table>
+    <tbody>
+    <tr>
+        <td>
+            <h4><a href="amount-text-field.html">amountTextField</a></h4>
+        </td>
+        <td>
+            <code><span class="keyword">lateinit</span> <span class="keyword">var </span><span class="identifier">amountTextField</span><span
+                    class="symbol">: </span><span class="identifier">TextField</span></code></td>
+    </tr>
+    <tr>
+        <td>
+            <h4><a href="convert-button.html">convertButton</a></h4>
+        </td>
+        <td>
+            <code><span class="keyword">lateinit</span> <span class="keyword">var </span><span class="identifier">convertButton</span><span
+                    class="symbol">: </span><span class="identifier">Button</span></code></td>
+    </tr>
+    <tr>
+        <td>
+            <h4><a href="currency-text-field.html">currencyTextField</a></h4>
+        </td>
+        <td>
+            <code><span class="keyword">lateinit</span> <span class="keyword">var </span><span class="identifier">currencyTextField</span><span
+                    class="symbol">: </span><span class="identifier">TextField</span></code></td>
+    </tr>
+    <tr>
+        <td>
+            <h4><a href="exit-button.html">exitButton</a></h4>
+        </td>
+        <td>
+            <code><span class="keyword">lateinit</span> <span class="keyword">var </span><span class="identifier">exitButton</span><span
+                    class="symbol">: </span><span class="identifier">Button</span></code></td>
+    </tr>
+    <tr>
+        <td>
+            <h4><a href="live-data-check-box.html">liveDataCheckBox</a></h4>
+        </td>
+        <td>
+            <code><span class="keyword">lateinit</span> <span class="keyword">var </span><span class="identifier">liveDataCheckBox</span><span
+                    class="symbol">: </span><span class="identifier">CheckBox</span></code></td>
+    </tr>
+    <tr>
+        <td>
+            <h4><a href="reset-button.html">resetButton</a></h4>
+        </td>
+        <td>
+            <code><span class="keyword">lateinit</span> <span class="keyword">var </span><span class="identifier">resetButton</span><span
+                    class="symbol">: </span><span class="identifier">Button</span></code></td>
+    </tr>
+    <tr>
+        <td>
+            <h4><a href="strategy.html">strategy</a></h4>
+        </td>
+        <td>
+            <code><span class="keyword">var </span><span class="identifier">strategy</span><span
+                    class="symbol">: </span><a href="../../data/-data/index.html"><span
+                    class="identifier">Data</span></a></code></td>
+    </tr>
+    <tr>
+        <td>
+            <h4><a href="target-currency-text-field.html">targetCurrencyTextField</a></h4>
+        </td>
+        <td>
+            <code><span class="keyword">lateinit</span> <span class="keyword">var </span><span class="identifier">targetCurrencyTextField</span><span
+                    class="symbol">: </span><span class="identifier">TextField</span></code></td>
+    </tr>
+    <tr>
+        <td>
+            <h4><a href="web-engine.html">webEngine</a></h4>
+        </td>
+        <td>
+            <code><span class="keyword">lateinit</span> <span class="keyword">var </span><span class="identifier">webEngine</span><span
+                    class="symbol">: </span><span class="identifier">WebEngine</span></code></td>
+    </tr>
+    <tr>
+        <td>
+            <h4><a href="web-view.html">webView</a></h4>
+        </td>
+        <td>
+            <code><span class="keyword">lateinit</span> <span class="keyword">var </span><span class="identifier">webView</span><span
+                    class="symbol">: </span><span class="identifier">WebView</span></code></td>
+    </tr>
+    </tbody>
+</table>
+<h3>Functions</h3>
+<table>
+    <tbody>
+    <tr>
+        <td>
+            <h4><a href="convert.html">convert</a></h4>
+        </td>
+        <td>
+            <p>calls the strategies get_rates function with the entered amount, currency and target currency</p>
+            <code><span class="keyword">fun </span><span class="identifier">convert</span><span
+                    class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span
+                    class="identifier">Unit</span></a></code></td>
+    </tr>
+    <tr>
+        <td>
+            <h4><a href="exit.html">exit</a></h4>
+        </td>
+        <td>
+            <code><span class="keyword">fun </span><span class="identifier">exit</span><span
+                    class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span
+                    class="identifier">Unit</span></a></code></td>
+    </tr>
+    <tr>
+        <td>
+            <h4><a href="initialize.html">initialize</a></h4>
+        </td>
+        <td>
+            <code><span class="keyword">fun </span><span class="identifier">initialize</span><span
+                    class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span
+                    class="identifier">Unit</span></a></code></td>
+    </tr>
+    <tr>
+        <td>
+            <h4><a href="live-data-changer.html">liveDataChanger</a></h4>
+        </td>
+        <td>
+            <p>Changes the strategy depending whether the checkbox is checked or not</p>
+            <code><span class="keyword">fun </span><span class="identifier">liveDataChanger</span><span
+                    class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span
+                    class="identifier">Unit</span></a></code></td>
+    </tr>
+    <tr>
+        <td>
+            <h4><a href="reset.html">reset</a></h4>
+        </td>
+        <td>
+            <p>Clears all input and output fields</p>
+            <code><span class="keyword">fun </span><span class="identifier">reset</span><span
+                    class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span
+                    class="identifier">Unit</span></a></code></td>
+    </tr>
+    <tr>
+        <td>
+            <h4><a href="start.html">start</a></h4>
+        </td>
+        <td>
+            <code><span class="keyword">fun </span><span class="identifier">start</span><span
+                    class="symbol">(</span><span class="identifier"
+                                                 id="controller.Controller$start(javafx.stage.Stage)/primaryStage">primaryStage</span><span
+                    class="symbol">:</span>&nbsp;<span class="identifier">Stage</span><span class="symbol">)</span><span
+                    class="symbol">: </span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span
+                    class="identifier">Unit</span></a></code></td>
+    </tr>
+    </tbody>
+</table>
+<h3>Companion Object Functions</h3>
+<table>
+    <tbody>
+    <tr>
+        <td>
+            <h4><a href="main.html">main</a></h4>
+        </td>
+        <td>
+            <code><span class="keyword">fun </span><span class="identifier">main</span><span
+                    class="symbol">(</span><span class="identifier"
+                                                 id="controller.Controller.Companion$main(kotlin.Array((kotlin.String)))/args">args</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html"><span
+                    class="identifier">Array</span></a><span class="symbol">&lt;</span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+                    class="identifier">String</span></a><span class="symbol">&gt;</span><span
+                    class="symbol">)</span><span class="symbol">: </span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span
+                    class="identifier">Unit</span></a></code></td>
+    </tr>
+    </tbody>
+</table>
+</BODY>
+</HTML>

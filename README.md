@@ -20,7 +20,7 @@
 - [x] Das Model bildet die Schnittstelle zum Webservice bzw. zu den lokal hinterlegten Daten
 - [x] Es gibt zwei Serivce-Strategien (eigene Klassen!):
   - [x] Eine Strategie fragt ein Online-RESTful Service ab (Empfehlung: https://exchangeratesapi.io/) und wandelt das Ergebnis in (HTML-)Text um
-  - [ ] Eine zweite Strategie verwendet lokal abgelegte (hardgecodete) Werte und liefert wieder das Ergebnis als (HTML-)Text zurück
+  - [x] Eine zweite Strategie verwendet lokal abgelegte (hardgecodete) Werte und liefert wieder das Ergebnis als (HTML-)Text zurück
   - [x] Beide Klassen übernehmen den Betrag, die Ursprungswährung und die Zielwährung(en) als Parameter
   - [x] Eine abstrakte Klasse fasst die Gemeinsamkeiten zusammen
   - Hinweis: Über das Python-Package requests können sehr einfach Webservice-Anfragen geschickt und über JSON in ein Dictionary umgewandelt werden:

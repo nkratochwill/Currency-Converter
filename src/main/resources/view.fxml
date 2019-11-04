@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.web.WebView?>
 <GridPane xmlns:fx="http://javafx.com/fxml/1" alignment="center" hgap="10" prefHeight="600.0" prefWidth="900.0"
-          vgap="10" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="Controller">
+          vgap="10" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="controller.Controller">
     <rowConstraints>
         <RowConstraints minHeight="10.0" prefHeight="30.0"/>
         <RowConstraints maxHeight="400.0" minHeight="30.0" prefHeight="40.0" vgrow="ALWAYS"/>

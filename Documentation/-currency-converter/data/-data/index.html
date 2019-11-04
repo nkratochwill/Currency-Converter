@@ -1,0 +1,109 @@
+<HTML>
+<HEAD>
+    <meta charset="UTF-8">
+    <title>Data - CurrencyConverter</title>
+    <link href="../../../style.css" rel="stylesheet">
+</HEAD>
+<BODY>
+<a href="../../index.html">CurrencyConverter</a>&nbsp;/&nbsp;<a href="../index.html">data</a>&nbsp;/&nbsp;<a
+        href="./index.html">Data</a><br/>
+<br/>
+<h1>Data</h1>
+<code><span class="keyword">interface </span><span class="identifier">Data</span></code>
+<p>Interface for strategies</p>
+<h3>Functions</h3>
+<table>
+    <tbody>
+    <tr>
+        <td>
+            <h4><a href="display.html">display</a></h4>
+        </td>
+        <td>
+            <p>Gets the rates from the api or from local files</p>
+            <code><span class="keyword">open</span> <span class="keyword">fun </span><span
+                    class="identifier">display</span><span class="symbol">(</span><span class="identifier"
+                                                                                        id="data.Data$display(kotlin.String, kotlin.String, kotlin.collections.List((kotlin.String)), kotlin.collections.List((kotlin.String)), kotlin.String)/betrag">betrag</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+                    class="identifier">String</span></a><span class="symbol">, </span><span class="identifier"
+                                                                                            id="data.Data$display(kotlin.String, kotlin.String, kotlin.collections.List((kotlin.String)), kotlin.collections.List((kotlin.String)), kotlin.String)/currency">currency</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+                    class="identifier">String</span></a><span class="symbol">, </span><span class="identifier"
+                                                                                            id="data.Data$display(kotlin.String, kotlin.String, kotlin.collections.List((kotlin.String)), kotlin.collections.List((kotlin.String)), kotlin.String)/targetcurrencies">targetcurrencies</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span
+                    class="identifier">List</span></a><span class="symbol">&lt;</span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+                    class="identifier">String</span></a><span class="symbol">&gt;</span><span
+                    class="symbol">, </span><span class="identifier"
+                                                  id="data.Data$display(kotlin.String, kotlin.String, kotlin.collections.List((kotlin.String)), kotlin.collections.List((kotlin.String)), kotlin.String)/calculatedrates">calculatedrates</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span
+                    class="identifier">List</span></a><span class="symbol">&lt;</span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+                    class="identifier">String</span></a><span class="symbol">&gt;</span><span
+                    class="symbol">, </span><span class="identifier"
+                                                  id="data.Data$display(kotlin.String, kotlin.String, kotlin.collections.List((kotlin.String)), kotlin.collections.List((kotlin.String)), kotlin.String)/date">date</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+                    class="identifier">String</span></a>&nbsp;<span class="symbol">=</span>&nbsp;"1970-01-01"<span
+                    class="symbol">)</span><span class="symbol">: </span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+                    class="identifier">String</span></a></code></td>
+    </tr>
+    <tr>
+        <td>
+            <h4><a href="get_rates.html">get_rates</a></h4>
+        </td>
+        <td>
+            <p>Gets the rates from the api or from local files</p>
+            <code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">get_rates</span><span
+                    class="symbol">(</span><span class="identifier"
+                                                 id="data.Data$get_rates(kotlin.String, kotlin.String, kotlin.collections.List((kotlin.String)))/betrag">betrag</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+                    class="identifier">String</span></a><span class="symbol">, </span><span class="identifier"
+                                                                                            id="data.Data$get_rates(kotlin.String, kotlin.String, kotlin.collections.List((kotlin.String)))/currency">currency</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+                    class="identifier">String</span></a><span class="symbol">, </span><span class="identifier"
+                                                                                            id="data.Data$get_rates(kotlin.String, kotlin.String, kotlin.collections.List((kotlin.String)))/targetcurrencies">targetcurrencies</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span
+                    class="identifier">List</span></a><span class="symbol">&lt;</span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+                    class="identifier">String</span></a><span class="symbol">&gt;</span><span
+                    class="symbol">)</span><span class="symbol">: </span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+                    class="identifier">String</span></a></code></td>
+    </tr>
+    </tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+    <tbody>
+    <tr>
+        <td>
+            <h4><a href="../-offline-data/index.html">OfflineData</a></h4>
+        </td>
+        <td>
+            <p>Strategy for fetching rates from local json file</p>
+            <code><span class="keyword">class </span><span class="identifier">OfflineData</span>&nbsp;<span
+                    class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Data</span></a></code>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <h4><a href="../-online-data/index.html">OnlineData</a></h4>
+        </td>
+        <td>
+            <p>Strategy for fetching rates from https://exchangeratesapi.io</p>
+            <code><span class="keyword">class </span><span class="identifier">OnlineData</span>&nbsp;<span
+                    class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Data</span></a></code>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</BODY>
+</HTML>

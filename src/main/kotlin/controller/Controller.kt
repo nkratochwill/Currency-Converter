@@ -1,3 +1,5 @@
+package controller
+
 import data.Data
 import data.OfflineData
 import data.OnlineData
@@ -13,6 +15,9 @@ import javafx.scene.web.WebEngine
 import javafx.scene.web.WebView
 import javafx.stage.Stage
 
+/**
+ * Initializes the gui and binds the gui elements to the fxml file
+ */
 class Controller : Application() {
     lateinit var currencyTextField: TextField
     lateinit var targetCurrencyTextField: TextField
@@ -45,13 +50,19 @@ class Controller : Application() {
         webEngine = webView.engine
     }
 
+    /**
+     * Changes the strategy depending whether the checkbox is checked or not
+     */
     fun liveDataChanger() {
         strategy = when (liveDataCheckBox.isSelected) {
-            true -> OfflineData()
-            false -> OnlineData()
+            true -> OnlineData()
+            false -> OfflineData()
         }
     }
 
+    /**
+     * calls the strategies get_rates function with the entered amount, currency and target currency
+     */
     fun convert() {
         webEngine.loadContent(
             strategy.get_rates(
@@ -63,9 +74,12 @@ class Controller : Application() {
     }
 
     fun exit() {
-        TODO("Aber irgendwie unnötig")
+        TODO("???")
     }
 
+    /**
+     * Clears all input and output fields
+     */
     fun reset() {
         currencyTextField.clear()
         targetCurrencyTextField.clear()
